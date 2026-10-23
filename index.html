@@ -27,19 +27,25 @@ header{background:#071632;color:#fff;text-align:center}
 .raccourcis a:focus-visible{outline:2px solid #215fa6;outline-offset:2px}
 .raccourcis svg{width:12px;height:12px;flex:none}
 @media(prefers-color-scheme:dark){.raccourcis{background:#1c293a;border-bottom-color:#3b506b}.raccourcis a{color:#d2e7ff}.raccourcis a:hover,.raccourcis a:focus-visible{background:#2e4663}}
+
+.portail-bandeau{position:relative;isolation:isolate;overflow:hidden;background:#071632}
+.portail-bandeau picture,.portail-bandeau img{display:block;width:100%}
+.portail-bandeau img{height:clamp(120px,9.5vw,195px);object-fit:cover;object-position:center}
+.portail-bandeau-titre{position:absolute;z-index:1;left:50%;bottom:9%;transform:translateX(-50%);max-width:92%;margin:0;padding:5px 18px;border-radius:9px;background:rgba(3,16,35,.68);color:#fff;font:700 clamp(17px,2.8vw,37px)/1.15 Arial,sans-serif;text-align:center;text-shadow:0 1px 3px #000;white-space:nowrap}
+@media(max-width:767px) and (orientation:portrait){.portail-bandeau img{height:clamp(220px,78vw,400px);object-fit:cover}.portail-bandeau-titre{bottom:6%;font-size:clamp(15px,4.2vw,26px);white-space:normal;width:max-content}}
+@media(max-width:1100px) and (orientation:landscape){.portail-bandeau img{height:auto;object-fit:contain}.portail-bandeau-titre{bottom:6%}}
 </style>
-<link rel="stylesheet" href="/assets/portails-cartes-commun.css?v=20261023a">
+<link rel="stylesheet" href="/assets/portails-cartes-commun.css?v=20261023b">
 </head>
 <body>
 
-  <header>
-    <div class="hero">
-      <picture>
-        <source media="(max-width: 767px) and (orientation: portrait)" srcset="/assets/tciel/bandeau-t-ciel-portrait.webp">
-        <source media="(max-width: 1100px) and (orientation: landscape)" srcset="/assets/tciel/bandeau-t-ciel-paysage.webp">
-        <img src="/assets/tciel/bandeau-t-ciel-pc.webp" alt="Univers Terminale CIEL, mannequin au viseur lumineux" width="1920" height="320">
-      </picture>
-    </div>
+  <header class="portail-bandeau">
+    <picture>
+      <source media="(max-width: 767px) and (orientation: portrait)" srcset="/assets/tciel/bandeau-t-ciel-portrait.webp">
+      <source media="(max-width: 1100px) and (orientation: landscape)" srcset="/assets/tciel/bandeau-t-ciel-paysage.webp">
+      <img src="/assets/tciel/bandeau-t-ciel-pc.webp" alt="Univers technologique CIEL, mannequin et viseur lumineux" width="1920" height="320">
+    </picture>
+    <h1 class="portail-bandeau-titre">Terminale Bac Pro CIEL</h1>
   </header>
   <nav class="raccourcis" aria-label="Accès rapides aux applications">
     <a href="https://0351878b.index-education.net/pronote" target="_blank" rel="noopener noreferrer">Pronote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6m0-6-9 9M20 14v6H4V4h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -54,7 +60,7 @@ header{background:#071632;color:#fff;text-align:center}
 <a class="ressource raid" data-type="cours" data-couleur="bleu" href="/ressources/raid/" aria-label="RAID"><div class="contenu"><div class="entete-carte"><h3>RAID</h3><svg class="picto-type" viewBox="0 0 24 24" role="img" aria-label="Ressource pédagogique : livre ouvert avec coche"><path d="M12 7v14"/><path d="M3 18V5a2 2 0 0 1 2-2h3a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3a2 2 0 0 1 2 2v5"/><path d="M3 18h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h1"/><path d="m17 16 2 2 4-4"/></svg></div><p>Stockage et tolérance aux pannes</p></div><div class="visuel"><img src="https://bacprociel.github.io/ressources/raid/raid5-portail.webp?v=20261022" alt="Répartition des blocs de données et de parité sur cinq disques RAID" loading="lazy" width="1800" height="600" style="display:block;width:100%;height:100%;object-fit:contain"></div></a>
 </div></main>
 
-  <div class="version" aria-label="Version du portail">T-CIEL V1.0.5</div>
+  <div class="version" aria-label="Version du portail">T-CIEL V1.0.6</div>
 
 </body>
 </html>
