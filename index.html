@@ -54,18 +54,20 @@ header{background:#071632;color:#fff;text-align:center}
  .bandeau-identite .portail-bandeau-titre{font-size:clamp(24px,5.8vw,58px)}
  .bandeau-description{font-size:clamp(10px,1.55vw,18px)}
 }
+
+/* V1.0.34 : bandeaux WebP validés, sans titre CSS superposé. */
+.portail-bandeau .bandeau-illustre{display:block;width:100%;height:auto;object-fit:contain;object-position:center;}
+@media(max-width:767px) and (orientation:portrait){
+ .portail-bandeau{height:clamp(120px,30vw,220px);}
+ .portail-bandeau .bandeau-illustre{width:auto;height:100%;max-width:none;min-width:100%;object-fit:cover;object-position:left center;}
+}
 </style>
 <link rel="stylesheet" href="/assets/portails-cartes-commun.css?v=1.0.31">
 </head>
 <body>
 
   <header class="portail-bandeau">
-    <picture>
-      <source media="(max-width: 767px) and (orientation: portrait)" srcset="/assets/tciel/bandeau-t-ciel-portrait.webp">
-      <source media="(max-width: 1100px) and (orientation: landscape)" srcset="/assets/tciel/bandeau-t-ciel-paysage.webp">
-      <img src="/assets/tciel/bandeau-t-ciel-pc.webp" alt="Univers technologique CIEL, mannequin et viseur lumineux" width="1920" height="320">
-    </picture>
-    <div class="bandeau-identite"><h1 class="portail-bandeau-titre">T-CIEL</h1><span class="bandeau-separateur" aria-hidden="true"></span><p class="bandeau-description">INFORMATIQUE<br>ET RÉSEAUX<br>ÉLECTRONIQUE</p></div>
+    <img class="bandeau-illustre" src="/assets/tciel/bandeau-t-ciel-valide.webp" alt="Bandeau T-CIEL : informatique, réseaux et électronique" width="2172" height="240">
   </header>
   <nav class="raccourcis" aria-label="Accès rapides aux applications">
     <a href="https://0351878b.index-education.net/pronote" target="_blank" rel="noopener noreferrer"><img class="favicon" src="/assets/raccourcis/pronote.png" alt="" width="20" height="20" loading="lazy">Pronote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6m0-6-9 9M20 14v6H4V4h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -80,7 +82,7 @@ header{background:#071632;color:#fff;text-align:center}
 <a class="ressource raid" data-type="cours" data-couleur="bleu" href="/ressources/raid/" aria-label="RAID"><div class="contenu"><div class="entete-carte"><h3>RAID</h3><svg class="picto-type" viewBox="0 0 24 24" role="img" aria-label="Ressource pédagogique : livre ouvert avec coche"><path d="M12 7v14"/><path d="M3 18V5a2 2 0 0 1 2-2h3a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3a2 2 0 0 1 2 2v5"/><path d="M3 18h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h1"/><path d="m17 16 2 2 4-4"/></svg></div><p>Stockage et tolérance aux pannes</p></div><div class="visuel"><img src="https://bacprociel.github.io/ressources/raid/raid5-portail.webp?v=20261022" alt="Répartition des blocs de données et de parité sur cinq disques RAID" loading="lazy" width="1800" height="600" style="display:block;width:100%;height:100%;object-fit:contain"></div></a>
 </div></main>
 
-  <div class="version" aria-label="Version du portail">T-CIEL V1.0.33</div>
+  <div class="version" aria-label="Version du portail">T-CIEL V1.0.34</div>
 
 </body>
 </html>
